@@ -10,6 +10,10 @@ func main() {
 	fmt.Println("Result is: ", result)
 	resultPro := proAdd(7, 7, 9, 8, 6)
 	fmt.Println("Result from proAdd is: ", resultPro)
+	numberBack, messageBack := proAddTwo(1, 2, 3, 4, 5, 6, 7, 8, 9)
+	fmt.Println("Result from proAddTwo is: ", numberBack)
+	fmt.Println("and the message: ", messageBack)
+
 }
 func greeterTwo() {
 	fmt.Println("Another Method")
@@ -31,4 +35,13 @@ func proAdd(values ...int) int {
 		total += val
 	}
 	return total
+}
+
+func proAddTwo(values ...int) (int, string) {
+	total := 0
+
+	for _, val := range values {
+		total += val
+	}
+	return total, "Hi Pro result Is SUcces"
 }
